@@ -6,6 +6,7 @@ const router = express.Router(); // Capital R
 
 // GET http://localhost:3001/api/products
 router.get("/products", async (request: Request, response: Response, next: NextFunction) => {
+    console.log('im here2!');
     try {
         const products = await productsLogic.getAllProducts();
         response.json(products);
@@ -16,16 +17,18 @@ router.get("/products", async (request: Request, response: Response, next: NextF
 });
 
 // GET http://localhost:3001/api/products/:_id
-router.get("/products/:_id", async (request: Request, response: Response, next: NextFunction) => {
-    try {
-        const _id = request.params._id;
-        const product = await productsLogic.getOneProduct(_id);
-        response.json(product);
-    }
-    catch (err: any) {
-        next(err);
-    }
-});
+// router.get("/products/:_id", async (request: Request, response: Response, next: NextFunction) => {
+//     console.log('im here!');
+    
+//     try {
+//         const _id = request.params._id;
+//         const product = await productsLogic.getOneProduct(_id);
+//         response.json(product);
+//     }
+//     catch (err: any) {
+//         next(err);
+//     }
+// });
 
 // POST http://localhost:3001/api/products
 router.post("/products", async (request: Request, response: Response, next: NextFunction) => {
@@ -76,16 +79,16 @@ router.delete("/products/:_id", async (request: Request, response: Response, nex
 //     }
 // });
 
-// // GET http://localhost:3001/api/products-by-category/:categoryId
-// router.get("/products-by-category/:categoryId", async (request: Request, response: Response, next: NextFunction) => {
-//     try {
-//         const categoryId = request.params.categoryId;
-//         const products = await productsLogic.getProductsByCategory(categoryId);
-//         response.json(products);
-//     }
-//     catch (err: any) {
-//         next(err);
-//     }
-// });
+// GET http://localhost:3001/api/products/:categoryId
+router.get("/products/:categoryId", async (request: Request, response: Response, next: NextFunction) => {
+    try {
+        const categoryId = request.params.categoryId;
+        const products = await productsLogic.getProductsByCategory(categoryId);
+        response.json(products);
+    }
+    catch (err: any) {
+        next(err);
+    }
+});
 
 export default router;

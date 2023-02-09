@@ -8,7 +8,7 @@ export interface IProductModel extends mongoose.Document {
     name: string;
     price: number;
     categoryId: mongoose.Schema.Types.ObjectId // foreign key to categories collection
-    image: FileList;
+    imageUrl: string;
 }
 
 // 2.schema object from the above interface, containing additional configuration
@@ -28,11 +28,13 @@ export const productSchema = new mongoose.Schema<IProductModel>({
         min: [0, "price cant be negative"],
         man: [1000, "price cant be larger then 1000"],
     },
-    image: {
-        type: FileList,
+    imageUrl: {
+        type: String,
         required: [true, "missing image"]
     },
-    categoryId: mongoose.Schema.Types.ObjectId
+    categoryId : {
+     type: mongoose.Schema.Types.ObjectId
+    }
 
 }, {
     versionKey: false,  // don't add __v to added document 
@@ -41,7 +43,7 @@ export const productSchema = new mongoose.Schema<IProductModel>({
 });
 
 //adding virtual fields:
-productSchema.virtual("category", {
+productSchema.virtual("categories", {
     ref: CategoryModel, // model class, not a string
     localField: "categoryId", // in productModel- what is the relation field name
     foreignField: "_id", // in categoryModel - what is the relation field name

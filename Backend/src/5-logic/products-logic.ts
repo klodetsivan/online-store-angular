@@ -8,7 +8,9 @@ function getAllProducts(): Promise<IProductModel[]> {
     // return ProductModel.find().exec();   
 
     // get all products with virtual fields
-    return ProductModel.find().populate("category").exec();
+    const res =  ProductModel.find().populate("category").exec();
+    console.log(res) 
+    return res
 }
 
 // Get one product: 
@@ -58,7 +60,12 @@ async function deleteProduct(_id: string): Promise<void> {
 // }
 
 function getProductsByCategory(categoryId: string): Promise<IProductModel[]> {
-    return ProductModel.find({ categoryId }).populate("category").exec() 
+    console.log(categoryId,'sahvhjsdfgjhdg');
+    
+    const res = ProductModel.find().populate("categories").exec() 
+    console.log(res);
+    
+    return res
 }
 
 export default {
