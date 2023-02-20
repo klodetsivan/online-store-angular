@@ -8,6 +8,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from './components/home-area/home/home.component';
 import { ListComponent } from './components/data-area/list/list.component';
 import { AddComponent } from './components/data-area/add/add.component';
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+
+import { ProductCardComponent } from './components/data-area/product-card/product-card.component';
 import { PageNotFoundComponent } from './components/layout-area/page-not-found/page-not-found.component';
 
 @NgModule({
@@ -16,6 +19,7 @@ import { PageNotFoundComponent } from './components/layout-area/page-not-found/p
         MenuComponent,
         HomeComponent,
         ListComponent,
+        ProductCardComponent,
         AddComponent,
         PageNotFoundComponent
     ],

@@ -5,6 +5,7 @@ class AppConfig {
 
     // Server port: 
     public port = 3001;
+    public frontEndUrl = "http://localhost:4200";
 
 }
 

@@ -1,0 +1,14 @@
+<div class="box">
+    <div>
+        <button (click)="deleteMe()">❌</button>
+        <button (click)="onSelectAmount()">+</button>
+        <br>
+        {{product.name}}
+        <br>
+        Price: {{product.price | currency:'ILS'}}
+        <br>
+    </div>
+    <div>
+        <img [src]="imageSource">
+    </div>
+</div>

@@ -6,3 +6,45 @@
 ----------------------------
 2/9/2023, 9:18:27 PM 	 _id 63e235980cb746908e1e0c8e not exist
 ----------------------------
+2/19/2023, 8:01:16 PM 	 Cannot populate path `category` because it is not in your schema. Set the `strictPopulate` option to false to override.
+----------------------------
+2/20/2023, 7:26:23 PM 	 Route /api/products/ not exist
+----------------------------
+2/20/2023, 7:26:49 PM 	 Route /api/products/ not exist
+----------------------------
+2/20/2023, 7:26:54 PM 	 Route /api/products/ not exist
+----------------------------
+2/20/2023, 7:26:54 PM 	 Route /favicon.ico not exist
+----------------------------
+2/20/2023, 7:28:15 PM 	 Route /api/products/ not exist
+----------------------------
+2/20/2023, 7:28:22 PM 	 Route /api/products not exist
+----------------------------
+2/20/2023, 7:28:24 PM 	 Route /api/products not exist
+----------------------------
+2/20/2023, 7:29:51 PM 	 Route /images/icons/gear.png not exist
+----------------------------
+2/20/2023, 7:30:05 PM 	 Route / not exist
+----------------------------
+2/20/2023, 7:30:34 PM 	 Route /images/icons/gear.png not exist
+----------------------------
+2/20/2023, 7:46:33 PM 	 Route /api/products/images/undefined not exist
+----------------------------
+2/20/2023, 7:48:53 PM 	 Route /api/products/images/undefined not exist
+----------------------------
+2/20/2023, 7:50:30 PM 	 Route /api/products/images/undefined not exist
+----------------------------
+2/20/2023, 7:50:36 PM 	 Route /api/products/images/undefined not exist
+----------------------------
+2/20/2023, 7:50:42 PM 	 Route /api/products/images/undefined not exist
+----------------------------
+2/20/2023, 7:51:07 PM 	 Route /api/products/images/undefined not exist
+----------------------------
+2/20/2023, 7:51:12 PM 	 Route /api/products/images/undefined not exist
+----------------------------
+2/20/2023, 7:51:18 PM 	 Route /api/products/images/undefined not exist
+----------------------------
+2/20/2023, 7:51:27 PM 	 Route /api/products/images/undefined not exist
+----------------------------
+2/20/2023, 7:51:33 PM 	 Route /api/products/images/undefined not exist
+----------------------------

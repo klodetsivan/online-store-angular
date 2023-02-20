@@ -79,8 +79,8 @@ router.delete("/products/:_id", async (request: Request, response: Response, nex
 //     }
 // });
 
-// GET http://localhost:3001/api/products/:categoryId
-router.get("/products/:categoryId", async (request: Request, response: Response, next: NextFunction) => {
+// GET http://localhost:3001/api/products-by-category/:categoryId
+router.get("/products-by-category/:categoryId", async (request: Request, response: Response, next: NextFunction) => {
     try {
         const categoryId = request.params.categoryId;
         const products = await productsLogic.getProductsByCategory(categoryId);

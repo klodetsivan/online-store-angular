@@ -1,6 +1,6 @@
 class AppConfig {
 
-    public serverUrl = "http://localhost:3001/api/____";
+    public productsUrl = "http://localhost:3001/api/products/";
 
 }
 

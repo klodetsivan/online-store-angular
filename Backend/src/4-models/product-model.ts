@@ -13,7 +13,7 @@ export interface IProductModel extends mongoose.Document {
 
 // 2.schema object from the above interface, containing additional configuration
 
-export const productSchema = new mongoose.Schema<IProductModel>({
+export const ProductSchema = new mongoose.Schema<IProductModel>({
     name: {
         type: String,  // js string
         required: [true, "missing name"],
@@ -43,7 +43,7 @@ export const productSchema = new mongoose.Schema<IProductModel>({
 });
 
 //adding virtual fields:
-productSchema.virtual("categories", {
+ProductSchema.virtual("categories", {
     ref: CategoryModel, // model class, not a string
     localField: "categoryId", // in productModel- what is the relation field name
     foreignField: "_id", // in categoryModel - what is the relation field name
@@ -52,4 +52,4 @@ productSchema.virtual("categories", {
 
 // 3.model from the above interface anf schema
 
-export const ProductModel = mongoose.model<IProductModel>("ProductModel", productSchema, "products") // model name, schema, db collection name
+export const ProductModel = mongoose.model<IProductModel>("ProductModel", ProductSchema, "products") // model name, schema, db collection name
